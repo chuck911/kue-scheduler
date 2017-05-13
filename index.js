@@ -810,6 +810,7 @@ Queue.prototype.every = function (interval, job, done) {
 
       //generate job uuid
       var jobUUID = this._generateJobUUID(jobDefinition);
+      jobDefinition.uuid = jobUUID;
 
       //continue
       next(null, jobDefinition, jobUUID);
